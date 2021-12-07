@@ -1,0 +1,22 @@
+<app-header [title]="'Member Search'"></app-header>
+<div class="p-fluid">
+  <h3>Service Date</h3>
+  <p>{{ dateToday | date: 'dd/MM/YYYY'}}</p>
+</div>
+<div class="p-fluid">
+  <h3>Search Using</h3>
+  <div class="p-field">
+      <label for="policyNumber">Policy Number</label>
+      <p-inputMask id="policyNumber" type="text" [(ngModel)]="policyNumber" mask="99999999999" slotChar="" [autoClear]="false"></p-inputMask>
+      <small id="policyNumber-help" class="p-error" *ngIf="triggeredSubmit && policyNumber.length == 0 && memberCardNumber.length == 0">Policy Number is Required</small>
+  </div>
+  <div class="p-field">
+      <label for="memberCardNumber">Member Card Number</label>
+      <input id="memberCardNumber" type="text" pInputText (keypress)="handleChange($event)" [(ngModel)]="memberCardNumber">
+  </div>
+</div>
+<div class="p-grid">
+  <button pButton pRipple type="button" label="Submit" (click)="handleSubmit($event)"></button>
+  <button pButton pRipple type="button" class="p-button-secondary" label="Reset" (click)="handleClick($event)"></button>
+</div>
+<router-outlet></router-outlet>

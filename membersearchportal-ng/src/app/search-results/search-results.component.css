@@ -1,0 +1,8 @@
+.search-results-container {
+  margin: 10px;
+}
+
+:host ::ng-deep .p-card {
+  margin: 10px;
+  max-width: 700px;
+}

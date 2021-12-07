@@ -1,0 +1,9 @@
+.p-fluid,
+.p-grid {
+  margin: 10px;
+  max-width: 500px;
+}
+
+.p-button {
+  margin-right: 1rem;
+}

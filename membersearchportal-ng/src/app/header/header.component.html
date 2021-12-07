@@ -1,0 +1,5 @@
+<p-toast></p-toast>
+<div class="header" [ngStyle]="{backgroundColor:'var(--bluegray-100)'}">
+  <button pButton pRipple type="button" icon="button pi pi-bars" (click)="toggleMenu()"></button><h2>{{title}}</h2>
+</div>
+<app-menu [toggleMenu]="showMenu" (hidden)="detectAction()"></app-menu>

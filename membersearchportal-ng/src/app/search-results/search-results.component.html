@@ -1,0 +1,20 @@
+<app-header [title]="'Search Results'"></app-header>
+<div class="search-results-container">
+  <h5>Search Results</h5>
+  <div *ngFor="let result of searchResults">
+  <p-card *ngIf="result.searchResult">
+    <div class="p-grid">
+      <div class="p-col">First Name</div>
+      <div class="p-col-8">{{result.searchResult.firstName}}</div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col">Last Name</div>
+      <div class="p-col-8">{{result.searchResult.lastName}}</div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col">Date of birth</div>
+      <div class="p-col-8">{{result.searchResult.dataOfBirth | date: 'dd/MM/YYYY'}}</div>
+    </div>
+  </p-card>
+</div>
+</div>
